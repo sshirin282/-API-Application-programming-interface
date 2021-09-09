@@ -3,6 +3,8 @@ package com.example.api
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import com.android.volley.Request
 import com.android.volley.Response
@@ -44,6 +46,19 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.context, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.home->{
+
+            }
+        }
+        return true
     }
 }
