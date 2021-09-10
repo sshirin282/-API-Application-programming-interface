@@ -27,30 +27,6 @@
         app:menu="@menu/bottomlist"
         android:layout_alignParentBottom="true"/>
 
-<!--    <ViewStub-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:id="@+id/stub_list"/>-->
-
-
-<!--    <ViewStub-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:id="@+id/stub_grid"/>-->
-
-    <ViewStub android:id="@+id/list"
-        android:inflatedId="@+id/showlayout"
-        android:layout="@layout/list1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"/>
-
-    <ViewStub android:id="@+id/grid"
-        android:inflatedId="@+id/showlayout"
-        android:layout="@layout/grid"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"/>
 
 
 

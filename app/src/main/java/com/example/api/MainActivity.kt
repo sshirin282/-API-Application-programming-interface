@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var buttomnavigation:BottomNavigationView
     lateinit var toolbar:Toolbar
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,14 +29,18 @@ class MainActivity : AppCompatActivity() {
         buttomnavigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.api1->{
+                    val fragment = ap2()
+                    supportFragmentManager.beginTransaction().replace(R.id.frame,fragment).commit()
+                    true
+
+                }
+                R.id.api2->{
                     val fragment = ap1()
                     supportFragmentManager.beginTransaction().replace(R.id.frame, fragment).commit()
                     true
-                }
-                R.id.api2->{
-                     val fragment = ap2()
-                    supportFragmentManager.beginTransaction().replace(R.id.frame,fragment).commit()
-                    true
+//                     val fragment = ap2()
+//                    supportFragmentManager.beginTransaction().replace(R.id.frame,fragment).commit()
+//                    true
                 }
                 R.id.api3->{
                     val fragment =ap3()
@@ -56,8 +61,18 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.home->{
+                if(R.id.home.equals("")){
+                val fragment = ap2()
+                supportFragmentManager.beginTransaction().replace(R.id.frame,fragment).commit()
+                true
 
-            }
+            }else{
+                    val fragment = ap3()
+                    supportFragmentManager.beginTransaction().replace(R.id.frame,fragment).commit()
+                    true
+                }
+
+                }
         }
         return true
     }
